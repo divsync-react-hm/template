@@ -1,0 +1,117 @@
+/* Toggle Styles */
+
+#wrapper {
+  padding-left: 0;
+  -webkit-transition: all 0.5s ease;
+  -moz-transition: all 0.5s ease;
+  -o-transition: all 0.5s ease;
+  transition: all 0.5s ease;
+}
+#wrapper.toggled {
+  padding-left: 250px;
+}
+#sidebar-wrapper {
+  z-index: 1000;
+  position: fixed;
+  left: 250px;
+  width: 0;
+  height: 100%;
+  margin-left: -250px;
+  overflow-y: auto;
+  /* background: #000; */
+  -webkit-transition: all 0.5s ease;
+  -moz-transition: all 0.5s ease;
+  -o-transition: all 0.5s ease;
+  transition: all 0.5s ease;
+}
+#wrapper.toggled #sidebar-wrapper {
+  width: 250px;
+}
+#page-content-wrapper {
+  width: 100%;
+  position: absolute;
+  padding: 15px;
+}
+#wrapper.toggled #page-content-wrapper {
+  position: absolute;
+  margin-right: -250px;
+}
+/* Sidebar Styles */
+
+.sidebar-nav {
+  position: absolute;
+  top: 0;
+  width: 250px;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+.sidebar-headerShadow {
+  background: linear-gradient(180deg, black, rgb(211, 211, 211)); 
+  opacity: 0.25; 
+  height: 50px;
+}
+.sidebar-body {
+  margin-top: -12px; 
+  margin-left: 30px;
+}
+.sidebar-checkbox {
+  margin-top: 15px; 
+  margin-bottom: 15px;
+}
+.sidebar-input {
+  margin-top: 20px;
+}
+.sidebar-input input {
+  border: 1px solid darkgrey; 
+  border-radius: 3px;
+}
+.card {
+  width: 15rem; 
+  align-items: center;
+}
+.card-ribben {
+  position: absolute; 
+  color: white; 
+  font-size: 12px; 
+  top: 10px; 
+  left: 0px; 
+  background-color: green; 
+  padding: 1px; 
+  padding-left: 5px; 
+  padding-right: 7px;
+}
+
+@media(min-width:768px) {
+  #wrapper {
+    padding-left: 250px;
+  }
+  #wrapper.toggled {
+    padding-left: 0;
+  }
+  #sidebar-wrapper {
+    width: 250px;
+  }
+  #wrapper.toggled #sidebar-wrapper {
+    width: 0;
+  }
+  #page-content-wrapper {
+    padding: 20px;
+    position: relative;
+  }
+  #wrapper.toggled #page-content-wrapper {
+    position: relative;
+    margin-right: 0;
+  }
+}
+
+@media(min-width:0px) AND (max-width:992px){
+  .xs-view{
+    margin-bottom: 30px !important;
+  }
+}
+.card:hover {
+  background-color: green;
+  color: white;
+}
+
